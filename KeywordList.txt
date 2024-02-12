@@ -12,3 +12,5 @@ char
 boolean
 true
 false
+import
+new
