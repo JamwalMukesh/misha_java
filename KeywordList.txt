@@ -14,3 +14,13 @@ true
 false
 import
 new
+if
+else
+switch
+case
+break
+for
+while
+do
+goto (reserved keyword but there is no meaning of it in JVM)
+continue
