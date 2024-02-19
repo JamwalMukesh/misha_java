@@ -26,3 +26,4 @@ goto (reserved keyword but there is no meaning of it in JVM)
 continue
 private
 protected
+null
