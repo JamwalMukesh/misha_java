@@ -1,0 +1,19 @@
+You need to design a class name Time
+
+This class contains three member variable
+    hours
+    minutes
+    seconds
+
+You need to design some method which perform given operations
+    - A method which is used to set values of these member variable 
+    - A method which accept time in seconds as a parameter and convert this time 
+    into hours, minutes and seconds and save them in class member variable. 
+    - A method which is used to display your class member variable 
+    value into seconds. 
+    - A display method which print these member variable into time format 
+        like hh:mm:ss 
+
+        
+
+Write a main class which demonstrate Time class functionality.
