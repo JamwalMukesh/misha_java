@@ -29,3 +29,6 @@ protected
 null
 return
 this
+final
+goto
+const
