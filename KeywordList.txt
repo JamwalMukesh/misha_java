@@ -33,3 +33,5 @@ final
 goto
 const
 native
+extends
+super
