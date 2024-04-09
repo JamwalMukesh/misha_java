@@ -35,3 +35,4 @@ const
 native
 extends
 super
+instanceof
