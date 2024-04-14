@@ -1,0 +1,12 @@
+Prepare a presentation which display difference between C++ and Java
+
+Inheritance in C++ vs Inheritance in Java 
+class A : B         class A extends B 
+{                   {
+
+};                  }
+
+In Python 
+
+class A(B):
+    pass
