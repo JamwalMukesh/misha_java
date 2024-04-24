@@ -36,3 +36,6 @@ native
 extends
 super
 instanceof
+abstract
+interface
+implements
