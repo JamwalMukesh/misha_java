@@ -1,0 +1,12 @@
+1. Java Language (Fundamental) Remaining Topic Package and Exception Handling
+2. RDBMS My SQL
+3. Java API Library (Collections, Stream API, Event Programming, GUI Programming etc.)
+4. JDBC API (Java Database Connectivity)
+5. Project
+
+Practice coding
+
+Core Programming Topic (Leet Code Question)
+Array, Two D Array, Linked List, Tree , Graph,
+
+Git Hub Solid
