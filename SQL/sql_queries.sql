@@ -285,3 +285,52 @@ SELECT e1.emp_id as EmployeeID , e1.name as 'Employee Name',
 e1.manager_id, ifnull(e2.name,'no manager') as 'Manager Name'
 FROM employee as e1 LEFT OUTER JOIN employee as e2
 ON e1.manager_id = e2.emp_id;
+
+USE world;
+
+-- Aggregate Function
+-- Multi Row Function which accept multiple data and return single value as a result
+SELECT max(population), min(population), avg(population), sum(population)
+FROM country;
+
+-- Count all records of a given table
+SELECT count(*)
+FROM country;
+
+-- Count all not null values present in a given column
+SELECT count(name)
+FROM country;
+
+SELECT count(indepyear)
+FROM country;
+
+-- count only unique continent value present
+SELECT count(distinct continent)
+FROM country;
+
+SELECT distinct continent 
+FROM country;
+
+-- I want to calculate total country present in continent 
+SELECT continent, count(*) as total_country
+FROM country;
+
+SHOW ERRORS;
+-- 'In aggregated query without GROUP BY, expression #1 of SELECT list contains 
+-- nonaggregated column ''world.country.Continent''; this is incompatible with 
+-- sql_mode=only_full_group_by'
+
+SELECT continent, count(*) as total_country
+FROM country
+GROUP BY continent;
+
+SELECT continent, count(*) as total_country
+FROM country
+GROUP BY continent
+ORDER BY continent desc;
+
+-- HAVING clause used to filter group by result
+SELECT continent, count(*) as total_country
+FROM country
+GROUP BY continent
+HAVING count(*) > 20;
