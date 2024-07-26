@@ -334,3 +334,107 @@ SELECT continent, count(*) as total_country
 FROM country
 GROUP BY continent
 HAVING count(*) > 20;
+
+-- Ready made functions
+USE sakila;
+
+SHOW TABLES;
+
+SELECT * FROM film;
+
+SELECT * FROM rental;
+
+-- TEMPORAL Function means function which is related to date and time
+SELECT date(rental_date),year(rental_date),month(rental_date),day(rental_date),
+monthname(rental_date),dayname(rental_date)
+FROM rental;
+
+SELECT time(rental_date),hour(rental_date),minute(rental_date),second(rental_date)
+FROM rental;
+
+SElECT * 
+FROM rental
+WHERE hour(rental_date) = 20; -- = is used as comparison 
+
+SELECT curdate(),curtime(),sysdate(),now();
+
+-- Nested Query or Sub Query
+-- We can write a select query inside another select query
+DESC film;
+
+DESC language;
+-- Here film table has column which name is language_id which is a foreign
+-- key with language table language_id column
+-- Requirement:- Display all language name and total number of film in this language
+-- One Solution to use JOIN
+SELECT name,title
+FROM film f1 JOIN language l
+ON f1.language_id = l.language_id;
+
+SELECT name,count(*)
+FROM film f1 JOIN language l
+ON f1.language_id = l.language_id
+GROUP BY name;
+
+-- You can achieve above query result using Sub Query at column level
+SELECT name, 
+(SELECT count(*) FROM film WHERE film.language_id = language.language_id) as total_film
+FROM language;
+
+SELECT name,count(*)
+FROM film f1 RIGHT OUTER JOIN language l
+ON f1.language_id = l.language_id
+GROUP BY name;
+
+SELECT name,count(film_id)
+FROM film f1 RIGHT OUTER JOIN language l
+ON f1.language_id = l.language_id
+GROUP BY name;
+
+USE world;
+
+SELECT * FROM country
+ORDER BY population DESC 
+LIMIT 1,1;
+
+-- Above query result can be achieved using Sub Query at WHERE level
+-- FIRST FROM clause
+-- FROM country apply WHERE clause to every record
+-- 
+SELECT * FROM country
+WHERE population < ( SELECT max(population) FROM country )
+ORDER BY population DESC
+limit 1;
+
+SELECT continent, sum(population)
+FROM country
+GROUP BY continent;
+
+SELECT avg(population) FROM 
+( SELECT continent, sum(population) as population
+FROM country
+GROUP BY continent ) as t;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
