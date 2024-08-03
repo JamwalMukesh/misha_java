@@ -1,0 +1,22 @@
+Java follow RAD model which means Rapid Application Development Model. 
+Which focus upon usage of readymade code.
+
+There are two kind of developer.
+1. To build code to use by another developer 
+2. Use the code developed by another developer.
+
+For e.g. System.out.println() is not defined by us. It is build by Java Environment 
+by some developer. 
+What happen if we are not using this method the way it is defined. 
+
+For understanding purpose,
+I prepare a class which provide find out the discounted price. 
+
+Today 3 August, 2024
+we cover Why Exception Handling?
+
+Exception Handling
+Exception Handling in Java is one of the effective means to handle runtime errors 
+so that the regular flow of the application can be preserved. 
+Java Exception Handling is a mechanism to handle runtime errors 
+such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
