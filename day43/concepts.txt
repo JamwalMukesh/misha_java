@@ -1,0 +1,97 @@
+Java follow RAD model which means Rapid Application Development Model. 
+Which focus upon usage of readymade code.
+
+There are two kind of developer.
+1. To build code to use by another developer 
+2. Use the code developed by another developer.
+
+For e.g. System.out.println() is not defined by us. It is build by Java Environment 
+by some developer. 
+What happen if we are not using this method the way it is defined. 
+
+For understanding purpose,
+I prepare a class which provide find out the discounted price. 
+
+Today 3 August, 2024
+we cover Why Exception Handling?
+
+Exception Handling
+Exception Handling in Java is one of the effective means to handle runtime errors 
+so that the regular flow of the application can be preserved. 
+Java Exception Handling is a mechanism to handle runtime errors 
+such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+In Java all exception are child of java.lang.Exception class 
+Here, java.lang is package name.
+java.lang.RuntimeException class which is a parent of all runtime exception.
+
+Java also provide a custom exception or user defined exception.
+
+With the help of throw keyword we can generate exception in code.
+
+If a piece code throws an exception and it is occurred in code, then, JVM provide 
+a mechanism to handle it. Which is if there is an exception handler which handle it, 
+then, JVM run that handler or if there is no exception handler then it call default 
+exception handler.
+
+Default exception handler stop the program execution and return complete function 
+call stack to the console.
+
+To handle an exception, developer need to provide an exception handler specific to  
+generated exception.
+For this, Java provide try catch.
+
+try block hold the code where exception is raised.
+catch block provide according to generated exception an alternate action.
+
+We can create more than one catch block for handling different type of exception.
+
+Interview Question:- List any 10 pre-defined exception.
+
+java.util.InputMismatchException is raised when someone entered invalid value 
+while calling Scanner read function.
+
+java.lang.ArithmeticException is raised when we try to get answer of divide by zero.
+
+Good Question:- java.lang package is default imported by Java Environment. java.lang is a most used 
+Java package.
+
+Second most used package in java is java.util 
+
+Java also provide generic exception handler. An exception handle which is capable to handle any type of 
+exception.
+
+java.lang.Exception class is a parent class of every kind of exception. 
+According to inheritance theory, parent class reference variable is capable to hold object reference of its 
+class object as well as its child class object.
+
+catch handler using Exception class is capable to handle any kind of exception raised by code.
+
+Avoid using Generic exception handler because it provide less control on exception handling.
+
+Note:- more specific exception handler must be written before Generic exception handler.
+
+List of any five Error classes in Java 
+    1. java.lang.OutOfMemoryError when our program take memory more than 
+    its VM size 
+
+    2. java.lang.StackOverflowError when our program function call is exhaust function call stack memory 
+
+    3. java.lang.NoClassDefFoundError when at runtime Java Environment didn't able to find byte code of a class.
+
+    4. java.lang.NoSuchMethodError when at runtime Java Environment didn't able to find definition of a method.
+
+Type of Exception:- 
+
+    1. Checked Exception:- JVM force developer to handle checked exception and easily detect them 
+    at compile time. Checked Exception are exceptions which are child of java.lang.Exception class 
+        java.lang.ClassNotFoundException
+        java.lang.InstantiationException
+        java.lang.IllegalAccessException
+
+    2. Un-Checked Exception:- These exceptions are child of java.lang.RuntimeException class. JVM 
+    ignore these exception at compile time. 
+
+There is a finally block which comes try with try block and always execute either exception raised or not
+    
+
