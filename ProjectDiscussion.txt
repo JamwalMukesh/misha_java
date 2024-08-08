@@ -1,0 +1,20 @@
+Project focus upon CRUD operations.
+
+API:- Application Programming Interface
+    It acts as an intermediary, allowing different applications to interact and share data or functionality without needing to know the intricate details of how the other system works.
+
+PRoject Lecture:- https://www.youtube.com/playlist?list=PLkMeV6U8Rf07DEyaAfgzgzYv0TrrP8gvq
+
+JDBC API:- It is an interface to communicate with database.
+We are using Type IV driver or Thin Driver. 
+Java Application -> JDBC Type IV driver -> Database 
+
+Driver needs to be installed.
+Driver generally is a jar file.
+jar stands for Java Archive File.
+
+These driver is depends upon the Database vendor.
+
+Maven is a dependency manager in Java like npm in React JS or Node JS. 
+
+For connecting with database we need to establish connection of Java Application with MySQL Database.
